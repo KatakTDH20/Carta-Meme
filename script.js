@@ -99,29 +99,36 @@ document.getElementById('create-meme').addEventListener('click', function() {
   const selectedImage = document.querySelector('input[name="image"]:checked').value; // Obtener la imagen seleccionada
   const message = document.getElementById('message').value;
   const author = document.getElementById('author').value;
+  const bgColor = document.getElementById('bg-color').value; // Obtener el color de fondo seleccionado
 
   // Limpiar el contenido anterior del meme
+  const memeDisplay = document.getElementById('meme-display');
   memeDisplay.innerHTML = ''; // Limpiar contenido anterior
 
-  const memeImage = document.createElement('img');
+  // Cambiar el color de fondo del contenedor del meme
+  memeDisplay.style.backgroundColor = bgColor; // Aplicar el color de fondo seleccionado
 
-  // Asignar la imagen correcta según el radio seleccionado (desde la carpeta imagen)
-  memeImage.src = `imagen/${selectedImage}.jpg`; // Cargar desde la carpeta 'imagen'
+  // Crear la imagen del meme
+  const memeImage = document.createElement('img');
+  memeImage.src = `imagen/${selectedImage}.jpg`; // Asignar la imagen seleccionada
   memeImage.id = "meme-image"; // Asegurar que tenga el ID para aplicar los estilos CSS
 
+  // Crear el mensaje del meme
   const memeMessage = document.createElement('p');
   memeMessage.textContent = message;
-  memeMessage.classList.add('meme-message'); // Agregar clase para aplicar los estilos CSS
+  memeMessage.classList.add('meme-message'); // Aplicar las clases de estilo
 
+  // Crear el autor del meme
   const memeAuthor = document.createElement('p');
   memeAuthor.textContent = `Por: ${author}`;
-  memeAuthor.classList.add('meme-author'); // Agregar clase para aplicar los estilos CSS
+  memeAuthor.classList.add('meme-author'); // Aplicar las clases de estilo
 
-  // Añadir los nodos al div de visualización del meme
+  // Añadir los elementos al div de visualización del meme
   memeDisplay.appendChild(memeImage);   // Imagen del meme
   memeDisplay.appendChild(memeMessage); // Mensaje sobre la imagen
   memeDisplay.appendChild(memeAuthor);  // Autor debajo de la imagen
 });
+
 
 // Función para abrir el meme en una nueva ventana
 document.getElementById('generate-meme').addEventListener('click', function() {

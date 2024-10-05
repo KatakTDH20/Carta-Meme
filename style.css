@@ -89,7 +89,7 @@ button:hover {
   bottom: 200px; /* Posición en la parte inferior de la imagen */
   left: 50%; /* Centramos horizontalmente */
   transform: translateX(-50%); /* Centramos el texto en el eje horizontal */
-  color: #00bfff; /* Texto en celeste */
+  color: #ffffff; /* Texto en celeste */
   font-weight: bold;
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mayor visibilidad */
@@ -103,7 +103,7 @@ button:hover {
   bottom: 0; /* Justo al final de la imagen */
   left: 50%; /* Centrado horizontalmente */
   transform: translateX(-50%);
-  color: #00bfff; /* Texto en celeste */
+  color: #ffffff; /* Texto en celeste */
   font-weight: bold;
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.5);

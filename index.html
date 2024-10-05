@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Memes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="meme-creator">
+            <h1 class="title">Creador de Memes</h1>
+            <label for="category">Elige la categoría del meme:</label>
+            <select id="category">
+                <option value="kaiju">Kaiju No.8</option>
+                <option value="irumakun">Iruma-kun</option>
+                <option value="hdxd">DXD</option>
+            </select>
+
+            <div class="input-group">
+                <label for="message">Escribe tu mensaje:</label>
+                <input type="text" id="message" placeholder="Escribe tu mensaje aquí">
+            </div>
+
+            <div class="input-group">
+                <label for="author">Autor del meme:</label>
+                <input type="text" id="author" placeholder="Tu nombre">
+            </div>
+
+            <div class="input-group">
+                <label for="bg-color">Elige el color de fondo:</label>
+                <input type="color" id="bg-color">
+            </div>
+
+            <label for="image">Elige una imagen:</label>
+            <div id="image-options">
+                <label>
+                    <input type="radio" name="image" value="kafka1" checked>
+                    <img src="imagen/kafka1.jpg" alt="kafka 1" class="image-option"> 
+                </label>
+                <label>
+                    <input type="radio" name="image" value="kafka2">
+                    <img src="imagen/kafka2.jpg" alt="kafka 2" class="image-option"> 
+                </label>
+                <label>
+                    <input type="radio" name="image" value="kafka3">
+                    <img src="imagen/kafka3.jpg" alt="kafka 3" class="image-option"> 
+                </label>
+            </div>
+
+            <button id="create-meme">Crear Meme</button>
+            <button id="generate-meme">Generar Meme</button>
+        </div>
+
+        <div class="meme-display" id="meme-display">
+            <!-- El meme se mostrará aquí -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,114 @@
+body {
+  font-family: 'Courier New', Courier, monospace; /* Fuente relacionada con la temática otaku */
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.meme-creator {
+  flex: 1;
+  padding: 20px;
+  background-color: #000; /* Fondo color azabache para la mitad izquierda */
+  color: #00bfff; /* Texto en celeste */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar elementos en el contenedor */
+}
+
+.title {
+  background-color: #00bfff; /* Color celeste */
+  color: white; /* Texto en blanco */
+  padding: 10px;
+  border-radius: 5px; /* Bordes redondeados */
+  width: 100%; /* Ancho completo */
+  text-align: center; /* Centrar texto */
+}
+
+.input-group {
+  margin: 10px 0; /* Espaciado entre los grupos de entrada */
+  width: 100%; /* Ancho completo */
+}
+
+.image-option {
+  width: 100px; /* Ajusta el tamaño según lo necesites */
+  height: auto; /* Mantiene la proporción */
+  margin-left: 10px; /* Espacio entre el radio y la imagen */
+  cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+.button-container {
+  display: flex; /* Disposición en fila */
+  gap: 30px; /* Espacio notable entre los botones */
+  margin-top: 30px; /* Mayor margen superior para separar de los inputs */
+}
+
+button {
+  background-color: #00bfff; /* Color celeste */
+  color: white; /* Texto en blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+button:hover {
+  background-color: #008bbf; /* Color celeste más oscuro al pasar el mouse */
+}
+
+.meme-display {
+  flex: 1; /* Ocupará toda la mitad derecha */
+  background-color: #fafafa; /* Fondo color claro para la mitad derecha */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ccc;
+  position: relative; /* Importante para permitir que los elementos se posicionen relativos a este contenedor */
+  height: 100%; /* Ocupa toda la altura disponible */
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+#meme-image {
+  width: 80%;
+  height: 60%;
+  object-fit: contain;
+  display: block;
+  margin: 10px 0;
+  position: relative; /* Para permitir que los elementos se posicionen dentro de la imagen */
+  z-index: 1;
+}
+
+.meme-message {
+  position: absolute; /* Posición absoluta para estar dentro de la imagen */
+  bottom: 200px; /* Posición en la parte inferior de la imagen */
+  left: 50%; /* Centramos horizontalmente */
+  transform: translateX(-50%); /* Centramos el texto en el eje horizontal */
+  color: #00bfff; /* Texto en celeste */
+  font-weight: bold;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mayor visibilidad */
+  z-index: 2;
+  width: 80%; /* Ajusta al 80% del ancho de la imagen */
+  text-align: center;
+}
+
+.meme-author {
+  position: absolute; /* Posición absoluta para estar dentro de la imagen */
+  bottom: 0; /* Justo al final de la imagen */
+  left: 50%; /* Centrado horizontalmente */
+  transform: translateX(-50%);
+  color: #00bfff; /* Texto en celeste */
+  font-weight: bold;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  width: 80%; /* Ajusta al 80% del ancho de la imagen */
+  text-align: center;
+}
+
